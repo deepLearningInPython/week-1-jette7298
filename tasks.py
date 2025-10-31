@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
@@ -43,7 +43,7 @@ def ReLu(array, cutoff=0):
   """
   The function returns a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff
   """
-  result = numpy.maximum(array, 0)
+  result = np.maximum(array, 0)
   return result
 
 #testing it
