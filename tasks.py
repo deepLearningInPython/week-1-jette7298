@@ -67,7 +67,7 @@ def neural_net_layer(X, w):
   Takes in a two-dimensional numpy array of size (n, p) and a one-dimensional numpy array of size p. 
   Multiplies the arrays and applies ReLu funtion
   """
-  Z = X*w
+  Z = np.dot(X, w)
   return ReLu(Z)
 
 #testing it
