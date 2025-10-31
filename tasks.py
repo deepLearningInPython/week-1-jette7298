@@ -43,7 +43,7 @@ def ReLu(array, cutoff=0):
   """
   The function returns a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff
   """
-  result = numpy.maximum(array, 0)
+  result = numpy.maximum(array, cutoff)
   return result
 
 #testing it
