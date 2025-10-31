@@ -1,4 +1,4 @@
-import numpy as np
+import numpy
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
@@ -43,7 +43,7 @@ def ReLu(array, cutoff=0):
   """
   The function returns a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff
   """
-  result = np.maximum(array, 0)
+  result = numpy.maximum(array, 0)
   return result
 
 #testing it
@@ -67,7 +67,7 @@ def neural_net_layer(X, w):
   Takes in a two-dimensional numpy array of size (n, p) and a one-dimensional numpy array of size p. 
   Multiplies the arrays and applies ReLu funtion
   """
-  Z = np.dot(X, w)
+  Z = numpy.dot(X, w)
   return ReLu(Z)
 
 #testing it
