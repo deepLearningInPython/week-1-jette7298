@@ -13,7 +13,18 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
+def step(x):
+  """
+  This function returns 1 for numbers larger than 0 and -1 otherwise
+  """
+  if x > 0:
+    return 1
+  else:
+    return -1
+
+#testing it  
+step(8)
+step(-8)
 
 
 # -----------------------------------------------
@@ -28,9 +39,16 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(array, cutoff=0):
+  """
+  The function returns a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff
+  """
+  result = numpy.maximum(array, 0)
+  return result
 
-
+#testing it
+a = (1, -1, 3, -5, 0)
+ReLu(a)
 # -----------------------------------------------
 
 
@@ -44,7 +62,22 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+def neural_net_layer(X, w):
+  """
+  Takes in a two-dimensional numpy array of size (n, p) and a one-dimensional numpy array of size p. 
+  Multiplies the arrays and applies ReLu funtion
+  """
+  Z = X*w
+  return ReLu(Z)
+
+#testing it
+X = numpy.array([[1, -2, 3],
+              [4, -5, 6]])
+              
+w = numpy.array([0.5, 1.0, -2.0])
+
+print(neural_net_layer(X, w))
+
 
 
 # ------------------------------------------
